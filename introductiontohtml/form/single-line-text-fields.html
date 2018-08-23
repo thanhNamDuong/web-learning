@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Single line text fields</title>
+</head>
+
+<body>
+
+    <form action="">
+        <!-- #region text-single-->
+        <p>
+            <label for="comment">Add comment here</label>
+            <input type="text" name="comment" id="comment">
+        </p>
+        <p>
+            <label for="email">Enter your email</label>
+            <input type="email" name="email" id="email" multiple>
+        </p>
+        <p>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd">
+        </p>
+        <p>
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search">
+        </p>
+        <p>
+            <label for="tel">Telephone</label>
+            <input type="tel" name="telephone" id="tel">
+        </p>
+        <p>
+            <label for="url">Urls</label>
+            <input type="url" name="Urls" id="ulr">
+        </p>
+        <p>
+            <label for="comment">Add a comment here:</label>
+            <textarea cols="30" rows="10" wrap="soft">
+                This is my default content.
+            </textarea>
+        </p>
+        <p>
+            <button type="submit">Submit me!</button>
+        </p>
+        <!-- #endregion -->
+
+        <!-- #region select box-->
+        <p>
+            <label for="simple">Simple</label>
+            <select name="simple" id="simple">
+                <option value="">Banana</option>
+                <option selected value="">Cherry</option>
+                <option value="">Lemon</option>
+            </select>
+        </p>
+
+        <select name="groups" id="groups">
+            <optgroup label="fruits">
+                <option value="">Banana</option>
+                <option value="">Cherry</option>
+                <option value="">Lemon</option>
+            </optgroup>
+            <optgroup label="vegetables">
+                <option value="">Carrot</option>
+                <option selected value="">Egglandt</option>
+                <option value="">Potato</option>
+            </optgroup>
+        </select>
+
+        <select name="multi" id="multi" multiple>
+            <option value="">Banana</option>
+            <option value="">Cherry</option>
+            <option value="">Lemon</option>
+        </select>
+        <!-- #endregion -->
+
+        <!-- #region autocomplete box-->
+        <p>
+            <label for="myFruit">What's your favorites food</label>
+            <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+            <datalist id="mySuggestion">
+                <option>Apple</option>
+                option>Banana</option>
+                <option>Blackberry</option>
+                <option>Blueberry</option>
+                <option>Lemon</option>
+                <option>Lychee</option>
+                <option>Peach</option>
+                <option>Pear</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="myFruit1">What's your favorites food</label>
+            <input type="text" name="myFruit" id="myFruit1" list="fruitList">
+            <datalist id="fruitList">
+                <label for="suggestion">or pick a fruit</label>
+                <select name="altFruit" id="suggestion">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Blackberry</option>
+                    <option>Blueberry</option>
+                    <option>Lemon</option>
+                    <option>Lychee</option>
+                    <option>Peach</option>
+                    <option>Pear</option>
+                </select>
+            </datalist>
+        </p>
+        <!-- #endregion -->
+    </form>
+
+    <!-- #region -->
+    <form>
+        <fieldset>
+            <legend>Choose all the vegetables you like to eat</legend>
+            <ul>
+                <li>
+                    <label for="carrots">Carrots</label>
+                    <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+                </li>
+                <li>
+                    <label for="peas">Peas</label>
+                    <input type="checkbox" id="peas" name="peas" value="peas">
+                </li>
+                <li>
+                    <label for="cabbage">Cabbage</label>
+                    <input type="checkbox" id="cabbage" name="cabbage" value="cabbage">
+                </li>
+                <li>
+                    <label for="cauli">Cauliflower</label>
+                    <input type="checkbox" id="cauli" name="cauli" value="cauli">
+                </li>
+                <li>
+                    <label for="broc">Broccoli</label>
+                    <input type="checkbox" id="broc" name="broc" value="broc">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>What is your favorite meal?</legend>
+            <ul>
+                <li>
+                    <label for="soup">Soup</label>
+                    <input type="radio" checked id="soup" name="meal" value="soup">
+                </li>
+                <li>
+                    <label for="curry">Curry</label>
+                    <input type="radio" id="curry" name="meal" value="curry">
+                </li>
+                <li>
+                    <label for="pizza">Pizza</label>
+                    <input type="radio" id="pizza" name="meal" value="pizza">
+                </li>
+                <li>
+                    <label for="tacos">Tacos</label>
+                    <input type="radio" id="tacos" name="meal" value="tacos">
+                </li>
+                <li>
+                    <label for="bolognaise">Bolognaise</label>
+                    <input type="radio" id="bolognaise" name="meal" value="bolognaise">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <!-- #endregion -->
+    <form action="">
+        <p>
+            <label for="number">Age</label>
+            <input type="number" name="age" id="number" max="10" min="1">
+        </p>
+        <p>
+            <label for="slider">Slider</label>
+            <input type="range" name="slider" id="slider" min="0" max="500" step="1">
+            <span class="beancount"></span>
+            <script>
+                var beans = document.querySelector('#slider');
+                var count = document.querySelector('.beancount');
+                count.textContent = beans.value;
+                beans.oninput = function(){
+                    count.textContent = beans.value;
+                }
+            </script>
+        </p>
+    </form>
+
+    <form action="">
+        <p>
+            <input type="datetime-local" name="datetime" id="datetime">
+        </p>
+        <p>
+            <input type="month" name="month" id="month">
+        </p>
+        <p>
+            <input type="time" name="time" id="time">
+        </p>
+        <p>
+            <input type="week" name="week" id="week">
+        </p>
+        <p>
+            <label for="myDate">When are you available this summer?</label>
+            <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" id="myDate">
+        </p>
+    </form>
+    <!-- #region Advanced form widgets-->
+    <!-- #region other widgets-->
+    <form>
+        <p>
+            <label for="file">Choose an image to upload</label>
+            <input type="file" name="file" id="file" accept="image/*" multiple>
+        </p>
+        <div>
+            <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+        </div>
+        <p>
+            <input type="image" name="pos" alt="" src="map.png">
+        </p>
+        <p>
+            <progress max="100" value="75">75/100</progress>
+        </p>
+        <p>
+            <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+        </p>
+    </form>
+    <!-- #endregion -->
+
+</body>
+
+</html>
