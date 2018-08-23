@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form validation</title>
+
+</head>
+<body>
+    <form action="">
+        <p>
+            <label for="fruits">Enter a fruit</label>
+            <input name="fruits" id="fruits" requiredpattern="banana|cherry">
+        </p>
+        <p>
+            <button>Submit</button>
+        </p>
+    </form>
+
+    <form action="">
+        <div>
+            <label for="choose">Would you prefer a banana or cherry</label>
+            <input name="i_like" id="choose" required minlength="6" maxlength="6">
+        </div>
+        <div>
+            <label for="number">How many would you like?</label>
+            <input type="number" name="number" id="number" value="1" min="1" max="10">
+        </div>
+    </form>
+    
+</body>
+</html>
