@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A pseudo-element example</title>
+    <style>
+        /* All elements with an attribute "href" with values
+   starting with "http" will have an arrow added after their
+   content (to indicate they are external links) */
+
+        [href^=http]::after {
+            content: '⤴';
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS">CSS</a> defined in the MDN glossary.</li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</a> defined in the MDN glossary.</li>
+    </ul>
+
+</body>
+
+</html>
