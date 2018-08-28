@@ -4,5 +4,5 @@
  $the_array1 = [];
  $student = array("Jill","Micheal", "John", "Sally");
  echo $student[0];
-
+ echo $student[1];
 ?>
