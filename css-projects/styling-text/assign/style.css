@@ -1,0 +1,134 @@
+/* General setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+}
+
+/* Layout */
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+    padding: 20px;
+}
+
+/* header and footer */
+header,
+footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+html,
+body {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+header {
+    text-align: center;
+    letter-spacing: 1em;
+}
+
+/* section */
+section h2+p {
+    text-indent: 20px;
+}
+
+section p a {
+    outline: none;
+    text-decoration: none;
+}
+
+section a:link {
+    color: red;
+}
+
+section a:hover,
+section a:focus {
+    color: blueviolet;
+}
+
+section a:visited {
+    color: aqua;
+}
+
+section p a[href*="http"] {
+    background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+    background-size: 16px 16px;
+    padding-right: 19px;
+}
+
+/*navigation menu*/
+nav a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    width: 100%;
+    line-height: 3;
+    text-align: center;
+    font-size: 2.5rem;
+    border: 1px solid #a66;
+}
+
+nav a:link,
+nav a:visited,
+nav a:focus {
+    background: yellow;
+}
+
+nav a:hover {
+    background: orange;
+}
+
+nav a:active {
+    background: red;
+    color: white;
+}
+
+nav ul {
+    padding-left: 0;
+    margin-top: 0.8rem;
+}
+
+nav li {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+aside ul {
+    list-style-type: square;
+}
+
+@font-face {
+    font-family: 'myfont';
+    src: url();
+    font-weight: normal;
+    font-style: normal;
+}
