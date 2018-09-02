@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The basic: color, image, position, repeat</title>
+    <style>
+        p {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        p:nth-child(1) {
+
+            /* background proterties */
+            background-color: yellow;
+            background-image: url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png);
+            background-repeat: no-repeat;
+            background-position: 0 center;
+        }
+
+        p:nth-child(2) {
+            background-image: linear-gradient(to left,yellow,orange,yellow) ;
+        }
+    </style>
+</head>
+<body>
+    <p>Exciting box!</p>
+    <p>Background image: gradients</p>
+</body>
+</html>
