@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Converting series of Fahrenheit Values</title>
+</head>
+
+<body>
+    <script>
+        var degFahren = [212, 32, -500.0];
+        var degCent = [];
+        var loopCounter;
+        // for (loopCounter = 0; loopCounter < degFahren.length; loopCounter++) {
+        //     degCent[loopCounter] = 5 / 9 * (degFahren[loopCounter] - 32);
+        // }
+        for( var index in degFahren) {
+            degCent[index] = 5 / 9 * (degFahren[index] - 32);
+        }
+
+        for (loopCounter = 2; loopCounter >= 0; loopCounter--) {
+            document.write("Value " + loopCounter +
+                " was " + degFahren[loopCounter] +
+                " degrees Fahrenheit");
+            document.write(" which is " + degCent[loopCounter] +
+                " degrees centigrade<br />");
+        }
+
+    </script>
+</body>
+
+</html>
