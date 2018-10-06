@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Filtering greeting messages</title>
+
+</head>
+
+<body>
+    <div class="output">
+        <h1>Live output</h1>
+        <ul>
+        </ul>
+    </div>
+
+    <script>
+        var list = document.querySelector('.output ul');
+        list.innerHTML = '';
+        var greetings = ['Happy Birthday!',
+            'Merry Christmas my love',
+            'A happy Christmas to all the family',
+            'You\'re all I want for Christmas',
+            'Get well soon'
+        ];
+
+        for (let index = 0; index < greetings.length; index++) {
+            var input = greetings[index];
+            if (greetings[index].indexOf('Christmas') !== -1) {
+                var reSult = input;
+                var listItem = document.createElement('li');
+                listItem.textContent = reSult;
+                list.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Top 5 Search</h1>
+    <div class="output">
+      
+            <input type="text">
+            <button type="submit">Submit</button>
+    
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        const list = document.querySelector('.output ul');
+        const searchBtn = document.querySelector('.output button');
+        const searchInput = document.querySelector('.output input');
+
+        list.innerHTML = '';
+
+        var myHistory= [];
+        searchBtn.onclick() = function () {
+            if(searchInput.value !== '') {
+                myHistory.unshift(searchInput.value);
+                list.innerHTML = '';
+                for (let index = 0; index < myHIstory.length; index++) {
+                    var element = myHIstory[index];
+                    var listItem = document.createElement('li');
+                    listItem.textContent = element;
+                    list.appendChild(listItem);
+
+                }
+
+                if(myHistory.length >= 5) {
+                    myHistory.pop();
+                }
+                searchInput.value = '';
+                searchInput.focus();
+            }
+        }
+    </script>
+    
+</body>
+</html>

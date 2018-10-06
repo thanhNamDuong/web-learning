@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Making new string from old parts</title>
+</head>
+
+<body>
+    <div class="output">
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        var list = document.querySelector('.output ul');
+        list.innerHTML = '';
+        var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+            'GNF576746573fhdg4737dh4;Greenfield',
+            'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+            'SYB4f65hf75f736463;Stalybridge',
+            'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'
+        ];
+
+        for (var i = 0; i < stations.length; i++) {
+            var input = stations[i];
+            // write your code just below here
+            var threeLetter = input.slice(0,3);
+            var indexSemicolon = input.indexOf(';');
+            var address = input.slice(indexSemicolon + 1,input.length);   
+
+            var result = threeLetter + ": " + address;
+            var listItem = document.createElement('li');
+            listItem.textContent = result;
+            list.appendChild(listItem);
+        }
+    </script>
+
+</body>
+
+</html>
