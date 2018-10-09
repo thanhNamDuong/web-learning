@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 </head>
+
 <body>
     <h1>Top 5 Search</h1>
     <div class="output">
-      
-            <input type="text">
-            <button type="submit">Submit</button>
-    
+        <input type="text">
+        <button type="submit">Submit</button>
         <ul>
-
         </ul>
     </div>
     <script>
@@ -20,27 +19,30 @@
 
         list.innerHTML = '';
 
-        var myHistory= [];
-        searchBtn.onclick() = function () {
-            if(searchInput.value !== '') {
+        var myHistory = [];
+        searchBtn.addEventListener('click', function () {
+            if (searchInput.value !== '') {
+
                 myHistory.unshift(searchInput.value);
                 list.innerHTML = '';
-                for (let index = 0; index < myHIstory.length; index++) {
-                    var element = myHIstory[index];
-                    var listItem = document.createElement('li');
-                    listItem.textContent = element;
+                for (let index = 0; index < myHistory.length; index++) {
+                    let itemIndex = myHistory[index];
+                    let listItem = document.createElement('li');
+                    listItem.textContent = itemIndex;
                     list.appendChild(listItem);
-
                 }
 
-                if(myHistory.length >= 5) {
+
+                if (myHistory.length >= 5) {
                     myHistory.pop();
                 }
+
                 searchInput.value = '';
                 searchInput.focus();
             }
-        }
+        })
     </script>
-    
+
 </body>
+
 </html>
