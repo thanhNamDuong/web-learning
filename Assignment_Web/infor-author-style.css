@@ -1,0 +1,39 @@
+header,
+footer {
+    background: lightcyan;
+}
+
+
+.header-last-post {
+    margin-bottom: 5%;
+}
+.header-last-post h3{
+    border-bottom: 1px solid skyblue;
+    margin-right: 20;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: skyblue;
+}
+
+.infor-author img {
+    text-align: center;
+}
+.name-author,
+.post-count h5,
+.email,
+.count-post {
+    text-align: center;
+    display: block;
+} 
+
+
+.email {
+    color: grey;
+}
+
+.count-post {
+    font-weight: bold;
+}
+.count-post {
+    font-size: 2em;
+}

@@ -1,0 +1,69 @@
+
+body {
+    margin: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+.searchMessage {
+    display: block;
+    background: lightgrey;
+    margin-bottom: 5%;
+    padding: 2px;
+}
+.searchMessage .key-word{
+    font-weight: bold;
+    color: black;
+}
+
+
+/* item  */
+
+.post-image:hover {
+    opacity: 0.6;
+}
+
+.post-title a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.post-title a:hover {
+    color: orange;
+    opacity: 0.3;
+}
+
+.author a{
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+
+.author a:hover {
+    text-decoration: none;
+    color: darkgray;
+}
+.date-published {
+    color: gray;
+
+}
+.read-more {
+    display: inline-block;
+    background: orange;
+    color: whitesmoke;
+    padding: 2px;
+    width: auto;
+    height: auto;
+}
+
+.read-more:hover {
+    text-decoration: none;
+    outline: none;
+    color: white;
+    opacity: 0.9;
+}
+.post-infor {
+    margin-bottom: 5%;
+}
