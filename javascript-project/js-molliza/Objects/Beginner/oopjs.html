@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Object-oriented JavaScript example</title>
+
+</head>
+
+
+
+<body>
+
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What
+            are browser developer tools</a> for more information).</p>
+
+
+
+</body>
+
+
+
+<script>
+    // Constructors and objects instances
+    // function createNewPerson(name) {
+    //     var obj = {};
+    //     obj.name = name;
+    //     obj.greeting = function() {
+    //         alert('Hi! I\'m' + this.name +'.');
+    //     };
+    //     return obj;
+    // }
+    // var salva = createNewPerson('Salva')
+    // salva.name;
+    // salva.greeting();
+    // the above way is a bit long-winded
+    function Person(name) {
+        this.name = name;
+        this.greeting = function () {
+            alert('..........' + this.name);
+        }
+    }
+
+    var person1 = new Person('Bob');
+    var person2 = new Person('Sarah');
+
+    //Other ways to create object instances
+    var person3 = new Object();
+    person3.name = 'Chris';
+    person3['age'] = 38;
+    person3.greeting = function () {
+        alert('Hi! I\'m ' + this.name + '.');
+    }
+
+    var person4 = new Object({
+                name: 'Chris',
+                age: 38,
+                greeting: function () {
+                    alert('Hi! I\'m ' + this.name + '.');
+                }
+            });
+    //using the create() method => you can create a new object based on any exitstin oject
+    var person5 = Object.create(person4);
+    
+</script>
+
+</html>
